@@ -1,0 +1,12 @@
+# OASIS_START
+# DO NOT EDIT (digest: 9f5160b6caefd18a2219b275a0ac88ee)
+version = "0.9.1"
+description = "Bindings to libvhd"
+requires = "threads unix ctypes ctypes.foreign"
+archive(byte) = "iscsilib.cma"
+archive(byte, plugin) = "iscsilib.cma"
+archive(native) = "iscsilib.cmxa"
+archive(native, plugin) = "iscsilib.cmxs"
+exists_if = "iscsilib.cma"
+# OASIS_STOP
+

@@ -1,0 +1,22 @@
+OASISFormat:  0.3
+Name:         vhdlib
+Version:      0.9.1
+Synopsis:     Bindings to libvhd
+License:      BSD3
+Authors:      various
+Copyrights:   (C) 2012 Citrix
+BuildTools:   ocamlbuild
+Plugins:      DevFiles (0.3), META (0.3)
+
+Library iscsilib
+  Path: lib
+  Modules: Iscsilib
+  BuildDepends: threads,unix,ctypes,ctypes.foreign
+  CCLib: -Xlinker --no-as-needed -liscsi
+
+Executable test
+  CompiledObject: native
+  Install: false
+  Path: lib_test
+  MainIs: test.ml
+  BuildDepends: iscsilib
